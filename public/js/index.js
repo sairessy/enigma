@@ -74,32 +74,24 @@ $(document).ready(()=> {
         }
     })
 
-    
 
-    async function getEnc() {
+    $('#a-about').click(()=> {
+        $('body, html').animate({scrollTop: innerHeight});
+    })
 
-        const data = {
-            text: 'Message to be encrypted!',
-            encrypt: true
-        }
+    $('#a-api').click(()=> {
+        $('body, html').animate({scrollTop: 2*innerHeight});
+    })
 
-        let ft = await fetch('/api', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-    
-            body: JSON.stringify(data)
-        });
-    
-        let res = await ft.json();
-        
-        if(data.encrypt) {
-            console.log(res.result);
+    $('#btn-gotop').click(()=> {
+        $("body, html").animate({scrollTop: 0});
+    });
+
+    $(window).scroll(()=> {
+        if(scrollY > 20) {
+            $('#btn-gotop').css({"transform": "scale(1)"});
         } else {
-            console.log(res.result.split('^').join(' '));
+            $('#btn-gotop').css({"transform": "scale(0)"});
         }
-    }
-
-    getEnc();
+    });
 });

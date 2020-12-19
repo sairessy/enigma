@@ -4,8 +4,13 @@
 }
 
 * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: rbt;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
 }
 
 body {
@@ -13,8 +18,48 @@ body {
     margin: 0;
 }
 
-#app {
+#home, #about, #api {
+    padding: 10px;
+    margin: 10px;
     height: 100vh;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+#logo {
+    color: #ccc;
+    font-weight: 100;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 40px;
+    height: 40px;
+}
+
+nav a:nth-child(1) {
+    border-bottom-color: #1a73eb;
+}
+
+nav a {
+    padding: 5px 0;
+    border-bottom: 1px solid #00000000;
+    transition: .4s ease;
+}
+
+nav a:hover {
+    border-bottom-color: #1a73eb;
+}
+
+#app {
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,15 +68,8 @@ body {
     margin: auto;
 }
 
-#logo {
-    width: fit-content;
-    margin: 10px auto;
-    color: #ccc;
-    font-weight: 100;
-}
-
 #app form {
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 10px;
     padding: 5px;
 }
@@ -58,14 +96,15 @@ form input {
 }
 
 form input:focus {
-    border-color: #1a73eb;
+    border-color: #000;
 }
 
 form button {
     width: 50px;
-    background-color: #1a75eb81;
-    color: #1a73eb;
-    border-color: #1a75eb81;
+    background-color: #000;
+    background-color: #1a73eb;
+    border-color: #1a73eb;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -99,7 +138,45 @@ form button {
     text-align: center;
 }
 
+h2 {
+    width: fit-content;
+    border-bottom: 1px solid #000;
+}
+
+#btn-gotop {
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+	display: flex;
+	border-radius: 100%;
+	box-shadow: 0 0 2px 4px #eee;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	right: 0;
+	bottom: 0;
+	margin: 10px;
+	cursor: pointer; 
+	color: #666;
+	transform: scale(0);
+	transition: .3s ease;
+}
+
+pre {
+    background-color: #fcfcfc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 @media screen and (max-width: 414px) {
+    #about, #api {
+        display: none;
+    }
+    
+    #header {
+        flex-direction: column;
+    }
+
     #app form #input {
         width: 100%;
     }
@@ -114,10 +191,7 @@ form button {
     
     form button {
         width: 30px;
-        background-color: #1a73eb;
-        border-color: #1a73eb;
-        color: #fff;
-        cursor: pointer;
+        
     }
 
     #app #msg {
