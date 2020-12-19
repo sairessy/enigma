@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel = "icon" type = "image/png" href = "assets/img/lock.svg">
+    <link rel="stylesheet" href="css/_libs/all.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Enigma PRO - Encrypt & Decrypt</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <h2>Encrypt and decrypt your messages efficiently!</h2> -->
+        <h1 id="logo">Enigma <strong>PRO</strong></h1>
+
+        <form id="form">
+            <div id="input">
+                <select id="select-enctype">
+                    <option value="0">Personal</option>
+                    <option value="1">Enigma PRO</option>
+                    <option value="2">Reverse</option>
+                </select>
+                <input type="text" placeholder="Enter yout text" id="txt" value="Modify this test to see the result!" onfocus="{value=''}">
+                <button><i class="fa fa-lock"></i></button>
+            </div>
+
+            <div id="code">
+                <input type="number" min="0" max="9" id="cesar" value="0" placeholder="Cesar">
+                <input type="number" min="0" max="9" id="reverse" value="0" placeholder="Reverse">
+            </div>
+
+            <div id="radio">
+                <input type="radio" name="select" value="encrypt" id="encrypt" checked>
+                <label for="encrypt">Encrypt</label>
+                <input type="radio" name="select" value="decrypt" id="decrypt">
+                <label for="decrypt">Decrypt</label>
+            </div>
+
+        </form>
+        
+        <div id="msg">
+            <p></p>        
+        </div>
+    
+    </div>
+
+    <script src="js/_libs/jquery-3.5.1.min.js"></script>
+    <script src="js/Enigma.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

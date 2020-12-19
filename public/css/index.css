@@ -1,0 +1,128 @@
+@font-face {
+    src: url(../assets/fonts/RobotoMono-VariableFont_wght.ttf);
+    font-family: rbt;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: rbt;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin: auto;
+}
+
+#logo {
+    width: fit-content;
+    margin: 10px auto;
+    color: #ccc;
+    font-weight: 100;
+}
+
+#app form {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#app form #input {
+    width: 540px;
+    border: 1px solid #eee;
+    display: flex;
+}
+
+select, input, button {
+    padding: 5px;
+    border: 1px solid #eee;
+    outline: none;
+}
+
+form select {
+    width: 115px;
+}
+
+form input {
+    flex: 1;
+    color: #666;
+}
+
+form input:focus {
+    border-color: #1a73eb;
+}
+
+form button {
+    width: 50px;
+    background-color: #1a75eb81;
+    color: #1a73eb;
+    border-color: #1a75eb81;
+    cursor: pointer;
+}
+
+#radio {
+    width: fit-content;
+    margin: 5px auto;
+}
+
+#radio input, label {
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#app #msg {
+    min-height: 100px;
+    width: 540px;
+    color: #888;
+    font-size: 14px;
+    word-break: break-all;
+    text-align: center;
+}
+
+#app #code {
+    display: flex;
+    justify-content: center;
+}
+
+#app #code input {
+    flex: 0.05;
+    margin: 5px 5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 414px) {
+    #app form #input {
+        width: 100%;
+    }
+
+    form select {
+        width: 80px;
+    }
+    
+    form #input input {
+        width: 100%;
+    }
+    
+    form button {
+        width: 30px;
+        background-color: #1a73eb;
+        border-color: #1a73eb;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #app #msg {
+        width: 90%;
+        padding: 10px;
+    }
+    
+}

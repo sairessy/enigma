@@ -1,0 +1,15 @@
+{
+  "name": "enigma",
+  "version": "1.0.0",
+  "description": "Encrypt and decrypt messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "author": "Victorino, Sairesse",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
